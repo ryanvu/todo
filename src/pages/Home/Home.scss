@@ -1,0 +1,10 @@
+@use '../../partials/mixins' as *;
+
+.home{
+    display: flex;
+    flex-direction: column;
+
+    &__hero{
+        background: black;
+    }
+}

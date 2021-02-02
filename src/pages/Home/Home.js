@@ -1,10 +1,13 @@
 import React from 'react'
 
+//StyleSheets
 const Home = () => {
     return (
-        <div>
-            
-        </div>
+        <main className="home">
+            <div className="home__hero">
+                <h2 className="home__hero-content">let's get things done</h2>
+            </div>
+        </main>
     )
 }
 

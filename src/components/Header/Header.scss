@@ -1,0 +1,47 @@
+@use '../../partials/mixins' as *;
+
+.header{
+    margin-top: 1rem;
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo{
+        color: white;
+        background: black;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+    &__nav{
+        list-style-type: none;
+        display: none;
+        @include tablet{
+            display: flex;
+        }
+
+        &-item{
+            text-decoration: none;
+            margin-right: 0.5rem;
+            &:visited{
+                color: inherit;
+            }
+        }
+    }
+
+    &__toggle{
+        height: 1.25rem;
+        margin-right: 1rem;
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__hb{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+}
