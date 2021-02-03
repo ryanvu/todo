@@ -20,7 +20,11 @@
         justify-content: space-between;
         align-items: center;
         height: 400px;
+        margin: 0 2rem;
         
+        @include tablet{
+            margin: 0;
+        }
         &-left{
             display: flex;
             flex-direction: column;

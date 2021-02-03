@@ -1,0 +1,17 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &__sign{
+        font-family: "Karla";
+    }
+}

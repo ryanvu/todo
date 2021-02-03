@@ -15,4 +15,10 @@
     &:focus{
         outline: none;
     }
+
+    &__white{
+        @extend .btn;
+        color: $white;
+        background: $black;
+    }
 }
