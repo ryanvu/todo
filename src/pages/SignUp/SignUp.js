@@ -1,5 +1,8 @@
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom';
+
+//contexts
+import { useAuth } from '../../contexts/AuthContext';
 //components
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
@@ -12,6 +15,8 @@ const SignUp = () => {
     const passwordRef = useRef();
     const confirmPassRef = useRef();
 
+    const { signUp } = useAuth();
+
     const handleSignUp = (e) => {
         e.preventDefault();
         const signUpInfo = {
@@ -19,7 +24,7 @@ const SignUp = () => {
             password: passwordRef.current.value
         }
         if (passwordRef.current.value === confirmPassRef.current.value){
-            console.log(signUpInfo);
+            signUp(signUpInfo);
         } else {
             console.log("Password's do not match")
         }
@@ -28,11 +33,11 @@ const SignUp = () => {
     return (
         <div className="signup">
             <h1 className="signup__title">Sign Up</h1>
-            <form autoComplete="off" className="signup__form">
+            <form onSubmit={handleSignUp} autoComplete="off" className="signup__form">
                 <Input inputRef={emailRef} label="Email" type="email"/>
                 <Input inputRef={passwordRef} label="Password" type="password"/>
                 <Input inputRef={confirmPassRef} label="Confirm Password" type="password" />
-                <Button handleClick={handleSignUp} text="Sign Up"/>
+                <Button kind="submit" text="Sign Up"/>
             </form>
             <p className="signup__alt">Already have an account? <Link to="/login">Log In</Link></p>
         </div>

@@ -24,4 +24,39 @@
         font-family: "Karla";
         margin-top: 2rem;
     }
+
+    &__mainErr{
+        align-self: center;
+        margin-top: 1rem;
+        color:rgb(231, 120, 120);
+
+        &::before{
+            content: "";
+            background-image: url('../../assets/images/error.svg');
+            display: inline-block;
+            margin-right: 0.2rem;
+            vertical-align: -18%;
+            height: 1rem;
+            width: 1rem;
+            background-size: 1rem 1rem;
+        }
+    }
+
+    &__err{
+        color: rgb(231, 120, 120);
+        font-size: 12px;
+        position: relative;
+        bottom: 0.75rem;
+
+        &::before{
+            content: "";
+            background-image: url('../../assets/images/error.svg');
+            display: inline-block;
+            margin-right: 0.2rem;
+            vertical-align: -28%;
+            height: 1rem;
+            width: 1rem;
+            background-size: 1rem 1rem;
+        }
+    }
 }
