@@ -1,12 +1,40 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { Link } from 'react-router-dom';
+//components
+import Button from '../../components/Button/Button';
+import Input from '../../components/Input/Input';
 
 //Stylesheets
 import './SignUp.scss';
 
 const SignUp = () => {
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const confirmPassRef = useRef();
+
+    const handleSignUp = (e) => {
+        e.preventDefault();
+        const signUpInfo = {
+            email: emailRef.current.value,
+            password: passwordRef.current.value
+        }
+        if (passwordRef.current.value === confirmPassRef.current.value){
+            console.log(signUpInfo);
+        } else {
+            console.log("Password's do not match")
+        }
+    };
+
     return (
-        <div>
-            
+        <div className="signup">
+            <h1 className="signup__title">Sign Up</h1>
+            <form autoComplete="off" className="signup__form">
+                <Input inputRef={emailRef} label="Email" type="email"/>
+                <Input inputRef={passwordRef} label="Password" type="password"/>
+                <Input inputRef={confirmPassRef} label="Confirm Password" type="password" />
+                <Button handleClick={handleSignUp} text="Sign Up"/>
+            </form>
+            <p className="signup__alt">Already have an account? <Link to="/login">Log In</Link></p>
         </div>
     )
 }

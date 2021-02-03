@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header__wrap">
-                <h1 className="header__logo">todo.</h1>
+                <Link className="header__nav-item"to="/"><h1 className="header__logo">todo.</h1></Link>
                 <ul className="header__nav">
                     <Link to="/" className="header__nav-item"><li>HOME</li></Link>
                     <Link to="/login" className="header__nav-item"><li>LOGIN</li></Link>

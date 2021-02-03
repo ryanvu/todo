@@ -3,11 +3,11 @@ import React from 'react'
 //stylesheets
 import './Input.scss';
 
-const Input = ({label, type}) => {
+const Input = ({label, type, inputRef}) => {
     return (
         <div className="input">
             <label className="input__label" htmlFor={label}>{label}</label>
-            <input className="input__input" type={type ? type : "text"}/>
+            <input ref={inputRef} className="input__input" type={type ? type : "text"} />
         </div>
     )
 }

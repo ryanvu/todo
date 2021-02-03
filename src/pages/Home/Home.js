@@ -13,8 +13,11 @@ const Home = () => {
         <main className="home">
             <div className="home__hero">
                 <div className="home__hero-left">
-                    <h2 className="home__hero-content">let's get things done</h2>
-                    <Link to="/signup"><Button text="Get Started"/></Link>
+                    <h1 className="home__hero-main">
+                        What's sleep? <br/>
+                        Keep grinding.</h1>
+                    <h2 className="home__hero-content">let's get things done.</h2>
+                    <Link className="home__hero-btn"to="/signup"><Button text="Get Started"/></Link>
                 </div>
                 <img className="home__hero-img"src={list} alt="list svg"/>
             </div>

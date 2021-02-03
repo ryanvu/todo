@@ -5,11 +5,21 @@
   margin: 0;
   box-sizing: border-box;
   color: $white;
+  font-family: "Karla";
 }
 
 @font-face{
   src: url('./assets/fonts/Karla-Regular.ttf');
   font-family: "Karla";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Karla";
+  src: url('./assets/fonts/Karla-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
 }
 
 body{
