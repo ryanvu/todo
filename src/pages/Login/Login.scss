@@ -1,2 +1,27 @@
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    max-width: 300px;
+
+    @include tablet{
+        padding: 0;
+        margin: 1rem auto;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+    }
+
+    &__alt{
+        font-family: "Karla";
+        margin-top: 2rem;
+    }
+}
