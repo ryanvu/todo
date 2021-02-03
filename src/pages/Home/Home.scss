@@ -1,10 +1,38 @@
 @use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
 
 .home{
     display: flex;
     flex-direction: column;
+    margin: 1rem;
+
+    @include tablet{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    @include desktop{
+        max-width: 720px;
+    }
 
     &__hero{
-        background: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        
+        &-content{
+            color: white;
+            font-size: 2rem;
+            width: 120px;
+        }
+
+        &-img{
+            height: 10rem;
+            @include tablet{
+                height: 50%;
+                max-width: 100%;
+            }
+        }
     }
 }

@@ -1,7 +1,18 @@
 @use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
 
 .header{
-    margin-top: 1rem;
+    margin: 1rem;
+
+    @include tablet{
+        max-width: 720px;
+        margin: 1rem auto;
+    }
+
+    @include desktop{
+        margin: 2rem auto;
+        max-width: 720px;
+    }
     &__wrap{
         display: flex;
         justify-content: space-between;
@@ -9,9 +20,6 @@
     }
 
     &__logo{
-        color: white;
-        background: black;
-        padding: 0.5rem 0.5rem 0.5rem 1rem;
     }
     &__nav{
         list-style-type: none;
@@ -21,6 +29,7 @@
         }
 
         &-item{
+            font-family: "Karla";
             text-decoration: none;
             margin-right: 0.5rem;
             &:visited{
@@ -31,7 +40,6 @@
 
     &__toggle{
         height: 1.25rem;
-        margin-right: 1rem;
         @include tablet{
             display: none;
         }
